@@ -1,29 +1,7 @@
 
-x
-java:S3740ΐ"/Provide the parametrized type for this generic.(ώΑ‰Ψϋÿÿÿÿ8―³–ήθ1J$cd5308ea-12d1-4890-8b74-155de5d4bd9d
-Ή
-java:S1319ΐ"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ώΑ‰Ψϋÿÿÿÿ8±³–ήθ1J$2bab1d48-d310-4e08-91bb-816de491cc95
 ‹
-java:S2184»"BCast one of the operands of this addition operation to a "double".(β›¤­ύÿÿÿÿ8΄³–ήθ1J$8293f7f1-5358-426a-a80a-c7f68db125b8
+java:S2184"BCast one of the operands of this addition operation to a "double".(β›¤­ύÿÿÿÿ8΄³–ήθ1J$5e745767-8573-436b-aed4-becde6d1c880
 ‘
-java:S2184Χ"HCast one of the operands of this multiplication operation to a "double".(Ε†φώÿÿÿÿ8€Ω ήθ1J$0c91efa0-abe7-4d00-b4fd-806807858155
+java:S2184¤"HCast one of the operands of this multiplication operation to a "double".(Ε†φώÿÿÿÿ8€Ω ήθ1J$f23e5c99-22f9-4b47-bd65-0c6bf672f8c0
 ‚
-java:S1118":Add a private constructor to hide the implicit public one.(θςµ€ωÿÿÿÿ8‘µ–ήθ1J$b5e2483e-3efa-4a9a-be1c-2740d5484ed5
-•	java:S100n"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”ΒΈϊÿÿÿÿÿ8™µ–ήθ1J$cf49b1a7-1ee0-4726-a414-be901df1a867
-‘	java:S100‚"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(υ§Φ8µ–ήθ1J$6c5ea1d3-5aa5-4c77-8eb2-7a1c2ff5e871
-–	java:S100–"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§σªθωÿÿÿÿ8›µ–ήθ1J$bdee0de3-e114-40d2-8459-9c22bb2fc356
-‘	java:S100ª"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ΎξΉ8›µ–ήθ1J$56bff247-7eff-405e-8aa3-1b4484f453b8
-n
-java:S1481Ε"*Remove this unused "cores" local variable.(ªωάΚ8¨µ–ήθ1J$0bf7fe5e-4a25-40fa-bcc6-ea70a9fe8897
-o
-java:S1481μ"&Remove this unused "x" local variable.(Ύ„λόÿÿÿÿ8ªµ–ήθ1J$a6d17593-9d82-4421-a524-3f2716cba9cc
-o
-java:S1481…"&Remove this unused "x" local variable.(Ύ„λόÿÿÿÿ8«µ–ήθ1J$07ff89cf-d008-4c66-8ac1-a1aa776758ea
-o
-java:S1481"&Remove this unused "x" local variable.(Ύ„λόÿÿÿÿ8¬µ–ήθ1J$6274f106-848a-4eff-9858-07cf1a47b7c6
-o
-java:S1481·"&Remove this unused "x" local variable.(Ύ„λόÿÿÿÿ8®µ–ήθ1J$c6466662-9cba-47d7-9142-4613d7a25a5e
-o
-java:S1481Σ"&Remove this unused "x" local variable.(Ύ„λόÿÿÿÿ8¥ήθ1J$c87c0438-22aa-4e2b-814e-b1edeaad4ca3
-o
-java:S1481π"&Remove this unused "x" local variable.(Ύ„λόÿÿÿÿ8δ°¥ήθ1J$f02c06ee-32b8-4a2d-bd5b-a74de046d5bd
+java:S1118":Add a private constructor to hide the implicit public one.(θςµ€ωÿÿÿÿ8‘µ–ήθ1J$40a71a53-3dfb-4f49-8212-895fc86e3035

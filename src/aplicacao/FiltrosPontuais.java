@@ -2,7 +2,6 @@ package aplicacao;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.util.ArrayList;
 public class FiltrosPontuais {
 
     private static int validaLimitesRGB(int valor, int acrescimo) {
@@ -11,14 +10,6 @@ public class FiltrosPontuais {
         else if (soma + acrescimo < 0) soma = 0;
         return soma;
     }
-
-    private static int validaLimitesRGB(int valor, float acrescimo) {
-        float multiplicacao = valor * acrescimo;
-        if (multiplicacao * acrescimo > 255) multiplicacao = 255;
-        else if (multiplicacao * acrescimo < 0) multiplicacao = 0;
-        return (int) multiplicacao;
-    }
-
     private static int validaLimitesRGB(double valor) {
         if (valor > 255) valor = 255;
         else if (valor < 0) valor = 0;
@@ -44,7 +35,6 @@ public class FiltrosPontuais {
         }
         return imgSaida;
     }
-
     public static BufferedImage bandaG (BufferedImage img){
         int width = img.getWidth();
         int height = img.getHeight();
@@ -64,7 +54,6 @@ public class FiltrosPontuais {
         }
         return imgSaida;
     }
-
     public static BufferedImage bandaB (BufferedImage img){
         int width = img.getWidth();
         int height = img.getHeight();
@@ -106,8 +95,7 @@ public class FiltrosPontuais {
         }
         return imgSaida;
     }
-
-    public static BufferedImage bandaCinza_R (BufferedImage img){
+    public static BufferedImage bandaCinzaR (BufferedImage img){
         int width = img.getWidth();
         int height = img.getHeight();
 
@@ -126,8 +114,7 @@ public class FiltrosPontuais {
         }
         return imgSaida;
     }
-
-    public static BufferedImage bandaCinza_B (BufferedImage img){
+    public static BufferedImage bandaCinzaB (BufferedImage img){
         int width = img.getWidth();
         int height = img.getHeight();
 
@@ -146,8 +133,7 @@ public class FiltrosPontuais {
         }
         return imgSaida;
     }
-
-    public static BufferedImage bandaCinza_G (BufferedImage img){
+    public static BufferedImage bandaCinzaG (BufferedImage img){
         int width = img.getWidth();
         int height = img.getHeight();
 
@@ -166,8 +152,7 @@ public class FiltrosPontuais {
         }
         return imgSaida;
     }
-
-    public static BufferedImage bandaCinza_M (BufferedImage img){
+    public static BufferedImage bandaCinzaM (BufferedImage img){
         int width = img.getWidth();
         int height = img.getHeight();
 
@@ -222,7 +207,6 @@ public class FiltrosPontuais {
         }
         return imgSaida;
     }
-
     public static BufferedImage alteracaoTonalidade(BufferedImage imgEntrada, String banda, int valor){
         if(!banda.equalsIgnoreCase("red") && !banda.equalsIgnoreCase("green")
         && !banda.equalsIgnoreCase("blue")){
@@ -257,7 +241,6 @@ public class FiltrosPontuais {
         }
         return imgSaida;
     }
-
     public static BufferedImage adicionarBrilho (BufferedImage img, int aditivo){
         int width = img.getWidth();
         int height = img.getHeight();
@@ -287,8 +270,7 @@ public class FiltrosPontuais {
         }
         return imgSaida;
     }
-
-    public static BufferedImage multiplicarBrilho (BufferedImage img, float multiplicativo){
+    public static BufferedImage multiplicarBrilho (BufferedImage img, double multiplicativo){
         int width = img.getWidth();
         int height = img.getHeight();
 
@@ -300,15 +282,13 @@ public class FiltrosPontuais {
         for(int h=0; h < height; h++){
             for(int w=0; w < width; w++){
                 Color cor = new Color(img.getRGB(w, h));
-
                 int red = cor.getRed();
-                red = validaLimitesRGB(red,multiplicativo);
-
                 int green = cor.getGreen();
-                green = validaLimitesRGB(green,multiplicativo);
-
                 int blue = cor.getBlue();
-                blue = validaLimitesRGB(blue,multiplicativo);
+
+                red = validaLimitesRGB(red * multiplicativo);
+                green = validaLimitesRGB(green * multiplicativo);
+                blue = validaLimitesRGB(blue * multiplicativo);
 
                 Color novaCor = new Color(red,green,blue);
                 imgSaida.setRGB(w, h, novaCor.getRGB());
@@ -317,29 +297,7 @@ public class FiltrosPontuais {
         return imgSaida;
     }
 
-    public static ArrayList obterYIQ (BufferedImage imagem){
-        int width = imagem.getWidth();
-        int height = imagem.getHeight();
 
-        ArrayList<Double[]> yiq = new ArrayList<>();
-        Double[] cores;
-
-        for(int w=0; w<width; w++){
-            for(int h=0; h<height; h++){
-                Color cor = new Color(imagem.getRGB(w,h));
-                int red = cor.getRed();
-                int green = cor.getGreen();
-                int blue = cor.getBlue();
-
-                double y = 0.299*red + 0.587*green + 0.114*blue;
-                double i = 0.596*red - 0.274*green - 0.322*blue;
-                double q = 0.211*red - 0.523*green + 0.312*blue;
-
-                yiq.add(new Double[]{y, i, q});
-            }
-        }
-        return yiq;
-    }
     public static double[] rgbparaYIQ(double red, double green, double blue){
         double y = (0.229*red) + (0.587*green) + (0.114*blue);
         double i = (0.596*red) - (0.274*green) - (0.322*blue);
@@ -361,7 +319,6 @@ public class FiltrosPontuais {
                 height,
                 BufferedImage.TYPE_INT_BGR);
 
-        int x = 0;
         for(int w=0; w<width; w++){
             for(int h=0; h<height; h++){
                 Color cores = new Color(imagem.getRGB(w, h));
@@ -372,7 +329,6 @@ public class FiltrosPontuais {
                 Color cor = new Color(y, y, y);
 
                 imgSaida.setRGB(w, h, cor.getRGB());
-                x++;
             }
         }
         return imgSaida;
@@ -386,7 +342,6 @@ public class FiltrosPontuais {
                 height,
                 BufferedImage.TYPE_INT_BGR);
 
-        int x = 0;
         for(int w=0; w<width; w++){
             for(int h=0; h<height; h++){
                 Color cores = new Color(imagem.getRGB(w, h));
@@ -397,7 +352,6 @@ public class FiltrosPontuais {
                 Color cor = new Color(i, i, i);
 
                 imgSaida.setRGB(w, h, cor.getRGB());
-                x++;
             }
         }
         return imgSaida;
@@ -411,7 +365,6 @@ public class FiltrosPontuais {
                 height,
                 BufferedImage.TYPE_INT_BGR);
 
-        int x = 0;
         for(int w=0; w<width; w++){
             for(int h=0; h<height; h++){
                 Color cores = new Color(imagem.getRGB(w, h));
@@ -422,7 +375,6 @@ public class FiltrosPontuais {
                 Color cor = new Color(q, q, q);
 
                 imgSaida.setRGB(w, h, cor.getRGB());
-                x++;
             }
         }
         return imgSaida;
@@ -436,7 +388,6 @@ public class FiltrosPontuais {
                 height,
                 BufferedImage.TYPE_INT_BGR);
 
-        int x = 0;
         for(int w=0; w<width; w++){
             for(int h=0; h<height; h++){
                 Color cores = new Color(imagem.getRGB(w, h));
@@ -450,7 +401,6 @@ public class FiltrosPontuais {
                 Color corFinal = new Color(red, green, blue);
 
                 imgSaida.setRGB(w, h, corFinal.getRGB());
-                x++;
             }
         }
         return imgSaida;
@@ -464,7 +414,6 @@ public class FiltrosPontuais {
                 height,
                 BufferedImage.TYPE_INT_BGR);
 
-        int x = 0;
         for(int w=0; w<width; w++){
             for(int h=0; h<height; h++){
                 Color cores = new Color(imagem.getRGB(w, h));
@@ -478,12 +427,10 @@ public class FiltrosPontuais {
                 Color corFinal = new Color(red, green, blue);
 
                 imgSaida.setRGB(w, h, corFinal.getRGB());
-                x++;
             }
         }
         return imgSaida;
     }
-
     public static BufferedImage negativoY(BufferedImage imagem){
         int width = imagem.getWidth();
         int height = imagem.getHeight();
@@ -493,7 +440,6 @@ public class FiltrosPontuais {
                 height,
                 BufferedImage.TYPE_INT_BGR);
 
-        int x = 0;
         for(int w=0; w<width; w++){
             for(int h=0; h<height; h++){
                 Color cores = new Color(imagem.getRGB(w, h));
@@ -507,7 +453,6 @@ public class FiltrosPontuais {
                 Color corFinal = new Color(red, green, blue);
 
                 imgSaida.setRGB(w, h, corFinal.getRGB());
-                x++;
             }
         }
         return imgSaida;
