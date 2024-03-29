@@ -1,0 +1,31 @@
+
+x
+java:S3740Ύ"/Provide the parametrized type for this generic.(ώΑ‰Ψϋÿÿÿÿ8―³–ήθ1J$a8f97910-4e6c-446c-8071-602bec0bec39
+Ή
+java:S1319Ύ"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ώΑ‰Ψϋÿÿÿÿ8±³–ήθ1J$14ea3270-0afc-4777-9643-5e2611bc9e4e
+]
+java:S1220""Move this file to a named package.8³³–ήθ1J$e922c1b8-34d3-47d2-9d8d-1f89e459854e
+‹
+java:S2184Ή"BCast one of the operands of this addition operation to a "double".(β›¤­ύÿÿÿÿ8΄³–ήθ1J$de0f7190-b912-46fa-930f-41ca674ab8dc
+‘
+java:S2184Υ"HCast one of the operands of this multiplication operation to a "double".(Ε†φώÿÿÿÿ8€Ω ήθ1J$45617fd9-c55f-4a41-b457-f6e136aa928f
+‚
+java:S1118":Add a private constructor to hide the implicit public one.(θςµ€ωÿÿÿÿ8‘µ–ήθ1J$d3793de7-fd14-4311-8125-3dfc47ffd21b
+•	java:S100l"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”ΒΈϊÿÿÿÿÿ8™µ–ήθ1J$33f685bd-e49d-439b-9d8d-7900dd5d2252
+‘	java:S100€"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(υ§Φ8µ–ήθ1J$8ccdb0a5-63d7-497c-9de9-17277f4ccde0
+–	java:S100”"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§σªθωÿÿÿÿ8›µ–ήθ1J$9aabac54-03a2-4c67-9eb4-b89e5efcb696
+‘	java:S100¨"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ΎξΉ8›µ–ήθ1J$f05510c8-651c-4692-88c1-da4219d2c964
+n
+java:S1481Γ"*Remove this unused "cores" local variable.(ªωάΚ8¨µ–ήθ1J$e5b52c9f-c748-4a15-8ee3-969fcdc5f548
+o
+java:S1481κ"&Remove this unused "x" local variable.(Ύ„λόÿÿÿÿ8ªµ–ήθ1J$582d8b57-c315-4ddc-b36f-8c1c594d6c56
+o
+java:S1481ƒ"&Remove this unused "x" local variable.(Ύ„λόÿÿÿÿ8«µ–ήθ1J$632291e1-2d4b-441d-9361-4b2dcbaf4ecc
+o
+java:S1481"&Remove this unused "x" local variable.(Ύ„λόÿÿÿÿ8¬µ–ήθ1J$63212e2f-81d5-41af-ab4a-8d40090d073b
+o
+java:S1481µ"&Remove this unused "x" local variable.(Ύ„λόÿÿÿÿ8®µ–ήθ1J$033a16fb-1524-4c28-85d2-3b16f0356a2a
+o
+java:S1481Ρ"&Remove this unused "x" local variable.(Ύ„λόÿÿÿÿ8¥ήθ1J$13d2d20a-6846-45b7-9f4e-6a134ec4d77c
+o
+java:S1481ξ"&Remove this unused "x" local variable.(Ύ„λόÿÿÿÿ8δ°¥ήθ1J$3ef7391a-d9e2-4756-b450-5e84ace3619f
