@@ -1,2 +1,2 @@
 # Aplicacao-de-Filtros-em-Imagens
-Os arquivos estão na branch master.
+Os arquivos e a lista de funções estão na branch master.
